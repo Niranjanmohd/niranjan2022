@@ -1,0 +1,21 @@
+
+
+Aggregate functions without "A"
+			Support numeric columns only
+		Ex: count, sum, average, max, min etc.
+
+Aggregate Functions with "A"
+		Work on Textual values, Boolean or Logical values (True, False), and blank values.
+		While working True considered as "1", false / blank / text value considered as "0"
+		Ex: countA, averageA, maxA, minA etc.
+
+Practice:
+		Create a table like below
+		Eid Salary Validtity  Jdate
+		1    10000   True        2022-02-01		
+
+		2    20000	  False      2022-09-01
+		3                 True       2022-08-01
+		
+
+	Note: COunt and Average fails when we take on Validaity column, whereas COuntA, AverageA, MaxA, and MinA work 		on validity column.

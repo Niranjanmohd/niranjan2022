@@ -1,4 +1,5 @@
 
+Today is Wedenesday  and Date is 2023-02-15
 
 Aggregate functions without "A"
 			Support numeric columns only

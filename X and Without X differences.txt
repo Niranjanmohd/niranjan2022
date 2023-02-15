@@ -1,0 +1,39 @@
+
+
+Functions without "X"
+		Perform all values operation and mostly context based operation
+Functions with "X"
+		Two types of operation
+		a) While returning single value: measure operation: expression / condition satisfied values participated
+		b) While returning multiple values in a column: column operation: For each row perform operations
+
+Ex: sumx, avgx, countx, productx, maxx, minx, concatenatex etc.
+
+Display total discount fee
+		Situation: A single value
+		Required: Calculated measure
+		How?
+			Two ways:
+			a) New measure-> Total Df= sum(factpayments[discount_fee])
+			b) New measure--> Total Df=sumx(factpayments,factpayments[discountfee])
+
+
+Display total discount fee for "HYD" location
+
+		Situation: A single value
+		Required: Calculated measure
+		How?
+			Two ways:
+			a) New measure-> Total Df= sumx(filter(factpayments,factpayments						[locationid]="hyd"),factpayments[discount_fee])
+			b) New measure--> Total Df=Calculate(sum(factpayments[discount_fee]),
+					filter(factpayments,factpayments[locationid]="hyd"))
+
+
+Display for each course total discount fee
+		Go to dimcourse table --> new column--> Each course total_sumx = sumx(relatedtable				(FactPayments),FactPayments[Discount_Fee])
+
+
+
+
+
+
